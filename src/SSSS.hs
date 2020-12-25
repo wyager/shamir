@@ -31,7 +31,7 @@ evaluate poly x = sum $ zipWith (*) (coeffs poly) powers
 
 randomCoeff :: IO Field
 randomCoeff = do
-    bytes <- getEntropy 16
+    bytes <- getEntropy 32 -- In case someone wants to use 256 bit
     let convert byte = fromIntegral (fromEnum byte)
         coeff = ByteString.foldl (\total byte -> total * 256 + convert byte) 0 bytes
     return coeff
