@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6850b2d102369067b9116113be311eb689d2f7f6f70994b3621ab9da245b149e
+
+name:           shamir
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/shamir#readme>
+homepage:       https://github.com/githubuser/shamir#readme
+bug-reports:    https://github.com/githubuser/shamir/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/shamir
+
+library
+  exposed-modules:
+      SSSS
+  other-modules:
+      Paths_shamir
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , entropy
+    , finite-field
+    , matrix
+  default-language: Haskell2010
+
+executable shamir-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_shamir
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wextra
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , entropy
+    , finite-field
+    , matrix
+    , shamir
+  default-language: Haskell2010
+
+test-suite shamir-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_shamir
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , entropy
+    , finite-field
+    , matrix
+    , shamir
+  default-language: Haskell2010
