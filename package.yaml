@@ -19,6 +19,13 @@ extra-source-files:
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/githubuser/shamir#readme>
 
+default-extensions:
+- OverloadedStrings
+- ScopedTypeVariables
+- RankNTypes
+- DeriveFunctor 
+- TypeApplications
+- FlexibleContexts
 
 dependencies:
 - base >= 4.7 && < 5
@@ -26,6 +33,11 @@ dependencies:
 - finite-field
 - entropy
 - bytestring
+- haskoin-core
+- text
+- optparse-applicative
+- attoparsec
+
 
 library:
   source-dirs: src

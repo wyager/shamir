@@ -1,6 +1,9 @@
 module Main where
 
 import qualified SSSS
+import qualified PrimeField
+import qualified Command
 
 main :: IO ()
-main = SSSS.main
+main = Command.run
+-- main = SSSS.test (Nothing :: Maybe PrimeField.Secret128)
